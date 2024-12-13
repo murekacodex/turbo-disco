@@ -1,0 +1,22 @@
+{
+  "name": "finalexam8020",
+  "version": "1.0.0",
+  "description": "Final Exam 8020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Student Name",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongoose": "*"
+  }
+}

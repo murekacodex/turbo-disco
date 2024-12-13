@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Choice Shop - Order Confirmation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header class="flex items-center justify-between p-4 bg-blue-500 text-white shadow-md">
+        <h1 class="text-2xl font-bold">Throat-ease Drinks</h1>
+        <nav class="flex space-x-6">
+            <a href="/" class="hover:text-gray-200 transition duration-300">Order Juices</a>
+            <a href="/orders" class="hover:text-gray-200 transition duration-300">View Orders</a>
+            <a href="/login" class="hover:text-gray-200 transition duration-300">Login</a>
+            <a href="/logout" class="hover:text-gray-200 transition duration-300">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <main class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold text-center text-blue-500 mb-6">Thank you for your order!</h2>
+
+            <p class="text-lg text-gray-700 text-center mb-4">Here are your order details:</p>
+
+            <ul class="space-y-4 text-gray-700">
+                <li class="text-lg">
+                    <span class="font-semibold">Name:</span>
+                    <%= name %>
+                </li>
+                <li class="text-lg">
+                    <span class="font-semibold">Phone:</span>
+                    <%= phone %>
+                </li>
+                <li class="text-lg">
+                    <span class="font-semibold">Total Mango Juices:</span>
+                    <%= mangoJuices %>
+                </li>
+                <li class="text-lg">
+                    <span class="font-semibold">Total Berry Juices:</span>
+                    <%= berryJuices %>
+                </li>
+                <li class="text-lg">
+                    <span class="font-semibold">Total Apple Juices:</span>
+                    <%= appleJuices %>
+                </li>
+                <li class="text-lg">
+                    <span class="font-semibold">Sub Total:</span> $<%= subTotal.toFixed(2) %>
+                </li>
+                <li class="text-lg">
+                    <span class="font-semibold">Tax:</span> $<%= tax.toFixed(2) %>
+                </li>
+                <li class="text-lg">
+                    <span class="font-semibold">Total Cost:</span> $<%= totalCost.toFixed(2) %>
+                </li>
+            </ul>
+
+            <div class="mt-6 text-center">
+                <a href="/"
+                    class="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
+                    Go Back to Order Page
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; Copyright - Student Name</p>
+        </footer>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throat-ease - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header class="flex items-center justify-between p-4 bg-blue-500 text-white shadow-md">
+        <h1 class="text-2xl font-bold">Throat-ease Drinks</h1>
+        <nav class="flex space-x-6">
+            <a href="/" class="hover:text-gray-200 transition duration-300">Order Juices</a>
+            <a href="/orders" class="hover:text-gray-200 transition duration-300">View Orders</a>
+            <a href="/login" class="hover:text-gray-200 transition duration-300">Login</a>
+            <a href="/logout" class="hover:text-gray-200 transition duration-300">Logout</a>
+        </nav>
+    </header>
+
+    <main class="p-10">
+        <h2 class="text-2xl font-semibold text-center mb-4">Login</h2>
+        <form action="/login" method="POST" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+
+            <div class="mb-4">
+                <label for="uname" class="block text-lg font-medium text-gray-700">Username:</label>
+                <input type="text" id="uname" name="uname" required
+                    class="w-full p-3 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="pass" class="block text-lg font-medium text-gray-700">Password:</label>
+                <input type="password" id="pass" name="pass" required
+                    class="w-full p-3 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <button type="submit"
+                class="w-full p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">Submit</button>
+
+            <% if (error) { %>
+                <p class="mt-4 text-red-500 text-center">
+                    <%= error %>
+                </p>
+                <% } %>
+        </form>
+
+    </main>
+    <footer>
+        <p>&copy; Copyright -  Ramandeep Kaur</p>
+    </footer>
+</body>
+
+</html>
