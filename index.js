@@ -65,7 +65,7 @@ myApp.post(
     '/submitOrder',
     [
         body('name', 'Name is required').isLength({ min: 1 }),
-        body('phone', 'Phone must be a valid number').isNumeric(),
+        body('phone', 'Phone must be a valid Canadian number').isMobilePhone('en-CA'),
         body('mangoJuices', 'Mango juice quantity must be a number').isNumeric(),
         body('berryJuices', 'Berry juice quantity must be a number').isNumeric(),
         body('appleJuices', 'Apple juice quantity must be a number').isNumeric(),
